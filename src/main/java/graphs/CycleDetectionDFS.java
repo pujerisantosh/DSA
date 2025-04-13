@@ -7,6 +7,8 @@ public class CycleDetectionDFS {
 
     public int solve(int A , int[][] B){
 
+        // Step 1: Initialize adjacency list
+
         List<List<Integer>> adjacentList = new ArrayList<>();
 
         for(int i=0; i<=A; i++){
