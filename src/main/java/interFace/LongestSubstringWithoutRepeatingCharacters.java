@@ -1,22 +1,24 @@
+package interFace;
+
 import java.util.HashSet;
 import java.util.Set;
 
-public class lengthOfLongestSubstring {
-
+public class LongestSubstringWithoutRepeatingCharacters {
 
     public static int solve(String s){
 
         Set<Character> set = new HashSet<>();
 
         int left =0;
+        int  maxlen =0;
 
-        int maxlen =0;
 
-        for (int right =0;right<s.length();right++){
+        for (int right=0;right<s.length();right++){
 
-            if (set.contains(s.charAt(right))){
+            while(set.contains(s.charAt(right))){
 
                 set.remove(s.charAt(left));
+
                 left++;
             }
 
@@ -24,9 +26,13 @@ public class lengthOfLongestSubstring {
             maxlen = Math.max(maxlen, right-left+1);
         }
 
-        return maxlen;
-    }
 
+        return  maxlen;
+
+    }
 }
 
-// time o(n), space O(n)
+/*
+
+time o(n), space 0(n)
+ */
