@@ -29,7 +29,10 @@ public class TwoSum {
 }
 /*
 
-I always start with the brute-force approach by checking every possible pair using two nested loops, which gives a time complexity of O(n²) and space complexity of O(1).
+I always start with the brute-force approach by checking every possible pair using
+two nested loops, which gives a time complexity of O(n²) and space complexity of O(1).
+
+
  The repeated work is searching for the complement for every element.
  To optimize, I use a HashMap to store previously seen numbers and their indices. For each element, I calculate the complement (target - currentElement) and check if it already exists in the map. Since HashMap lookup is O(1) on average, I can solve the problem in a single pass with O(n) time and O(n) space complexity.
  */

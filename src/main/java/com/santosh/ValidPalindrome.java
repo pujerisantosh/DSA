@@ -3,19 +3,18 @@ package com.santosh;
 public class ValidPalindrome {
 
 
+    public boolean isPalindrome(String s) {
 
-    public boolean isPalindrome(String s){
 
+        int left = 0;
+        int right = s.length() - 1;
 
-        int left =0;
-        int right = s.length()-1;
-
-        while (left <  right){
+        while (left < right) {
 
             // Skip left special characters
 
 
-            if (!Character.isLetterOrDigit(s.charAt(left))){
+            if (!Character.isLetterOrDigit(s.charAt(left))) {
 
                 left++;
                 continue;
@@ -24,11 +23,10 @@ public class ValidPalindrome {
             }
 
 
-
             // Skip right special characters
 
 
-            if (!Character.isLetterOrDigit(s.charAt(right))){
+            if (!Character.isLetterOrDigit(s.charAt(right))) {
 
                 right--;
                 continue;
@@ -43,6 +41,19 @@ public class ValidPalindrome {
 
     }
 
+    static void main(String[] args) {
+
+        String s = "A man, a plan, a canal: Panama";
+
+        ValidPalindrome vp = new ValidPalindrome();
+
+        Boolean res = vp.isPalindrome(s);
+
+        System.out.println(res);
+    }
+
+
+}
     /*
 
 
@@ -111,4 +122,4 @@ Auxiliary Space: O(1) (no extra string is created)
 
 
 
-}
+
