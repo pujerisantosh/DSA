@@ -1,4 +1,4 @@
-package com.santosh;
+package com.santosh.twoPointers;
 
 public class ValidPalindrome {
 
@@ -8,6 +8,11 @@ public class ValidPalindrome {
 
         int left = 0;
         int right = s.length() - 1;
+
+
+
+
+
 
         while (left < right) {
 
@@ -61,6 +66,9 @@ public class ValidPalindrome {
 
 
 }
+
+
+
     /*
 
 
@@ -124,6 +132,9 @@ Optimal
 Complexity
 Time: O(n) (each character is visited at most once)
 Auxiliary Space: O(1) (no extra string is created)
+
+
+
      */
 
 

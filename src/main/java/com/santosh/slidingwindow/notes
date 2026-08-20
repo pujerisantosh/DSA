@@ -1,0 +1,31 @@
+At most K
+     ↓
+count <= K → valid
+count > K  → invalid → shrink
+
+
+
+Expand right
+     ↓
+Window becomes invalid
+     ↓
+Shrink from left
+     ↓
+Keep shrinking only until valid
+     ↓
+Continue expanding
+     ↓
+Track maximum
+
+
+
+right → always moves forward
+
+left → moves forward ONLY when window is invalid
+
+
+right → always moves forward
+
+distinct > k → window invalid → left++
+
+distinct <= k → window valid → keep going
