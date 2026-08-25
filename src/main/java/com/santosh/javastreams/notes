@@ -1,0 +1,110 @@
+What is a Stream?
+
+A Java Stream is a way to process a collection of data
+ through a sequence of operations.
+
+
+ Intermediate vs Terminal Operations
+ Intermediate operations
+
+ They transform/filter the stream and return another Stream.
+
+ Examples:
+
+ filter()
+ map()
+ sorted()
+ distinct()
+ limit()
+
+ Example:
+
+ numbers.stream()
+        .filter(n -> n > 3)
+        .map(n -> n * 2)
+
+ This hasn't produced the final result yet.
+
+ Terminal operation
+
+ Produces the final result or side effect.
+
+ Examples:
+
+ toList()
+ collect()
+ forEach()
+ count()
+ reduce()
+ findFirst()
+
+ So:
+
+ numbers.stream()
+        .filter(n -> n > 3)
+        .map(n -> n * 2)
+        .toList();
+
+ is:
+
+ stream()
+    ↓
+ filter()     ← intermediate
+    ↓
+ map()        ← intermediate
+    ↓
+ toList()     ← terminal
+ ⭐ Interview Question
+ Is Stream lazy?
+
+ Yes.
+
+ Intermediate operations generally aren't executed until a terminal operation is invoked.
+
+ Example:
+
+ numbers.stream()
+        .filter(n -> {
+            System.out.println(n);
+            return n > 3;
+        });
+
+ Nothing meaningful is processed yet because there's no terminal operation.
+
+ Add:
+
+ .toList();
+
+ and the pipeline executes.
+
+ Interview answer
+
+ Java Streams use lazy evaluation for intermediate operations. The stream pipeline is generally executed when a terminal operation is invoked.
+
+ Backend example
+
+ Suppose we have:
+
+ List<Order> orders;
+
+ We want paid orders:
+
+ List<Order> paidOrders = orders.stream()
+         .filter(Order::isPaid)
+         .toList();
+
+ We can transform data:
+
+ List<Long> orderIds = orders.stream()
+         .map(Order::getId)
+         .toList();
+
+ This is why Streams are useful in backend code for collection processing and transformation.
+
+ 🎯 Today's Java checkpoint
+ Java Streams
+ ├── What is Stream?              ✅
+ ├── Stream ≠ Collection          ✅
+ ├── Intermediate operations      ✅
+ ├── Terminal operations          ✅
+ └── Lazy evaluation               ✅

@@ -1,6 +1,6 @@
 package com.santosh.twoPointers;
 
-public class ContainerWithMostWater {
+public class                                                                                                                                                                ContainerWithMostWater {
 
 
     public int maxArea(int[] height) {
