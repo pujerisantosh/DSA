@@ -1,0 +1,39 @@
+prefix[i] = nums[0] + nums[1] + ... + nums[i]
+
+
+Example
+
+Suppose we want:
+
+nums[1..3]
+
+That's:
+
+4 + 1 + 5 = 10
+
+Using prefix:
+
+prefix[3] - prefix[0]
+= 12 - 2
+= 10
+
+The general formula is:
+
+
+
+sum(left, right)
+=
+prefix[right + 1] - prefix[left]
+
+
+
+prefix[i + 1] = prefix[i] + nums[i];
+
+
+
+
+Build:
+prefix[i + 1] = prefix[i] + nums[i]
+
+Query:
+prefix[right + 1] - prefix[left]

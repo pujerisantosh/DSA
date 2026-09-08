@@ -54,3 +54,10 @@ public boolean validPalindrome(String s){
     }
 
 }
+
+/*
+
+"I'll use two pointers from both ends, skip non-alphanumeric characters, compare valid characters case-insensitively,
+ and move both pointers toward the center;
+ this gives O(n) time and O(1) auxiliary space."
+ */

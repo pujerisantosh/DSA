@@ -28,7 +28,9 @@ public class reverseString {
 Pattern: Two Pointers — opposite-direction pointers.
 
 Brute Force:
-Create a new array/string and copy characters in reverse order.
+Create a new array
+Traverse the original array from right → left
+Copy each character into the new array
 
 Time: O(n)
 Space: O(n) — extra array/string is required.
