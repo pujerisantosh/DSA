@@ -9,7 +9,7 @@ public class ContiguousArray {
     public int findMaxLength(int[] nums) {
 
 
-        public int findMaxLength ( int[] nums){
+
 
             Map<Integer, Integer> map = new HashMap<>();
 
@@ -42,8 +42,6 @@ public class ContiguousArray {
         }
     }
 
-
-}
 
 /*
 

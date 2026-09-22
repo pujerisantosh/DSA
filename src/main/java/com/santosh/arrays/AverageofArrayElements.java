@@ -27,5 +27,13 @@ public class AverageofArrayElements {
 
     static void main(String[] args) {
 
+        AverageofArrayElements a = new AverageofArrayElements();
+
+        int[] arr = {1,2,3,4,5};
+
+
+        System.out.println(a.solveint(arr));
+
+
     }
 }
